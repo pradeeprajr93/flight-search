@@ -1,0 +1,56 @@
+<div class="input-form-holder">
+    <img class="cloud1 cloudanimation1" src="assets/images/cloud1.png" alt="">
+    <img class="cloud2 cloudanimation2" src="assets/images/cloud2.png" alt="">
+
+    <div class="flex-holder">
+        <mat-button-toggle-group #group="matButtonToggleGroup" value="oneway">
+            <mat-button-toggle class="button-toggle" value="oneway">
+                <mat-icon>arrow_right_alt</mat-icon> One Way
+            </mat-button-toggle>
+            <mat-button-toggle class="button-toggle" value="return">
+                <mat-icon>swap_horiz</mat-icon> Return
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+        <form class="example-form" style="display: flex;flex-direction: column;padding-top: 15px;">
+            <mat-form-field class="example-full-width">
+                <input type="text" placeholder="Enter Origin" matInput [formControl]="myControl1"
+                    [matAutocomplete]="auto1">
+                <mat-autocomplete #auto1="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions1 | async" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width">
+                <input type="text" placeholder="Enter Destination" matInput [formControl]="myControl2"
+                    [matAutocomplete]="auto2">
+                <mat-autocomplete #auto2="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions2 | async" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker" placeholder="Departure Date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            
+            <mat-form-field *ngIf="group.value == 'return'" class="example-full-width">
+                <input matInput [matDatepicker]="picker" placeholder="Return Date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width">
+                <input matInput type="number" placeholder="No. of Passengers">
+            </mat-form-field>
+            
+            <button mat-raised-button color="primary">Search</button>
+
+        </form>
+    </div>
+
+</div>

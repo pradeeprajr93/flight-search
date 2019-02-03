@@ -1,0 +1,73 @@
+.input-form-holder{
+    height: calc(100vh - 60px);
+    background: #bedeff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.mat-button-toggle-checked{
+    background-color: #3f51b5;
+    color: white;
+}
+
+.mat-button-toggle-group-appearance-standard, .mat-button-toggle-standalone.mat-button-toggle-appearance-standard {
+    border: none;
+    border-radius: 100px;
+    box-shadow: rgba(0,0,0,0.25) 1px 1px 10px 1px;
+    width: 300px;
+}
+
+.button-toggle{
+    width: 150px;
+}
+
+.cloud1{
+    left: 100px;
+    top: 26px;
+    position: absolute;
+    width: 400px;
+    opacity: 0.8;
+}
+
+.cloud2{
+    position: absolute;
+    width: 400px;
+    right: 26px;
+    top: 137px;
+}
+
+.example-full-width{
+
+}
+
+.flex-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.cloudanimation1{
+    animation-name: cloudanimation;
+    animation-duration: 8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.cloudanimation2{
+    animation-name: cloudanimation;
+    animation-duration: 8s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes cloudanimation{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(50px);
+    }
+}
