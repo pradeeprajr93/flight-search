@@ -8,7 +8,7 @@ import { Subject }    from 'rxjs';
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(public http: HttpClient) { }
 
   private notifySource = new Subject<string>();
   notifyObservable = this.notifySource.asObservable();

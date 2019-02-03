@@ -1,0 +1,112 @@
+[
+    {
+        "flightcode": "YF101",
+        "source": "Pune",
+        "sourcecode": "PNQ",
+        "destination": "Delhi",
+        "destinationcode": "DEL",
+        "departure": "10:00AM",
+        "arrival": "12:00PM",
+        "fare": "8000",
+        "rating": 4
+    },
+    {
+        "flightcode": "YF102",
+        "source": "Delhi",
+        "sourcecode": "DEL",
+        "destination": "Pune",
+        "destinationcode": "PNQ",
+        "departure": "12:00AM",
+        "arrival": "10:00PM",
+        "fare": "12000",
+        "rating": 5
+    },
+    {
+        "flightcode": "YF103",
+        "source": "Chennai",
+        "sourcecode": "MAA",
+        "destination": "Bengaluru",
+        "destinationcode": "BLR",
+        "departure": "12:00AM",
+        "arrival": "10:00PM",
+        "fare": "4000",
+        "rating": 4
+    },
+    {
+        "flightcode": "YF104",
+        "source": "Bengaluru",
+        "sourcecode": "BLR",
+        "destination": "Chennai",
+        "destinationcode": "MAA",
+        "departure": "12:00PM",
+        "arrival": "3:00PM",
+        "fare": "7000",
+        "rating": 3
+    },
+    {
+        "flightcode": "YF105",
+        "source": "Hyderabad",
+        "sourcecode": "HYD",
+        "destination": "Chennai",
+        "destinationcode": "MAA",
+        "departure": "12:00PM",
+        "arrival": "3:00PM",
+        "fare": "21000",
+        "rating": 5
+    },
+    {
+        "flightcode": "YF106",
+        "source": "Chennai",
+        "sourcecode": "MAA",
+        "destination": "Hyderabad",
+        "destinationcode": "HYD",
+        "departure": "12:00PM",
+        "arrival": "3:00PM",
+        "fare": "31000",
+        "rating": 4
+    },
+    {
+        "flightcode": "YF107",
+        "source": "Mysore",
+        "sourcecode": "MYQ",
+        "destination": "Trichy",
+        "destinationcode": "TRZ",
+        "departure": "12:00PM",
+        "arrival": "6:00PM",
+        "fare": "8000",
+        "rating": 3
+    },
+    {
+        "flightcode": "YF108",
+        "source": "Trichy",
+        "sourcecode": "TRZ",
+        "destination": "Mysore",
+        "destinationcode": "MYQ",
+        "departure": "12:00PM",
+        "arrival": "6:00PM",
+        "fare": "4000",
+        "rating": 4
+    },
+    {
+        "flightcode": "YF109",
+        "source": "Port Blair",
+        "sourcecode": "IXZ",
+        "destination": "Pondicherry",
+        "destinationcode": "PNY",
+        "departure": "12:00PM",
+        "arrival": "6:00PM",
+        "fare": "6000",
+        "rating": 3
+    },
+    {
+        "flightcode": "YF110",
+        "source": "Pondicherry",
+        "sourcecode": "PNY",
+        "destination": "Port Blair",
+        "destinationcode": "IXZ",
+        "departure": "12:00PM",
+        "arrival": "6:00PM",
+        "fare": "34000",
+        "rating": 4
+    }
+]

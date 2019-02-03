@@ -11,7 +11,7 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class InputFormComponent implements OnInit {
 
-  constructor(private data: DataService) { }
+  constructor(public data: DataService) { }
 
   autoCompleteArray = [];
   myControl1 = new FormControl();
