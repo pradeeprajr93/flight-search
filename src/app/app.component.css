@@ -1,0 +1,16 @@
+.input-and-preview{
+    display: flex;
+}
+
+app-input-form{
+    width: 100%;
+}
+
+app-input-form.widthAuto{
+    min-width: 400px;
+    width: auto;
+}
+
+app-preview-pane{
+    width: 70%;
+}

@@ -1,3 +1,61 @@
-<p>
-  preview-pane works!
-</p>
+<div class="travel-details">
+  <div class="source-and-dest">
+    <div class="source">
+      {{data.selectedOrigin}}
+    </div>
+    <mat-icon>flight_takeoff</mat-icon>
+    <div class="destination">
+        {{data.selectedDestination}}
+    </div>
+  </div>
+  <div class="depart-and-return">
+    <div class="departure">
+      Depart: {{data.selectedDepartDate | date}}
+    </div>
+    <div *ngIf="data.isReturnFlightNeeded" class="return">
+      Return: {{data.selectedReturnDate | date}}
+    </div>
+  </div>
+</div>
+<hr>
+<div *ngIf="flightCardsArray" class="flight-cards">
+  <div *ngFor="let card of flightCardsArray" class="flight-card">
+    <div class="row-1">
+      <div class="fare">
+        Rs.{{card.fare}}
+      </div>
+      <div class="star-rating">
+        <mat-icon *ngFor="let star of starsArray(card.rating)" 
+        class="star">star</mat-icon>
+        <mat-icon *ngFor="let star of starsArray(5 - card.rating)" 
+        class="star">star_border</mat-icon>
+      </div>
+    </div>
+    <div class="flight-code">
+      {{card.flightcode}}
+    </div>
+    <div class="row-3">
+        <div class="group">
+            <div class="row-2">
+                <div class="src">
+                    {{card.source}} &nbsp;
+                  </div>
+                  <div class="arrow">
+                     > &nbsp;
+                  </div>
+                  <div class="dest">
+                    {{card.destination}} 
+                  </div>
+            </div>
+            <div class="dept-and-arrival">
+              Depart: {{card.departure}} <br>
+              Arrival: {{card.arrival}}
+            </div>
+        </div>
+        <button class="book-flight" color="primary" mat-raised-button>BOOK THIS FLIGHT</button>
+    </div>
+  </div>
+</div>
+<div class="sorry" *ngIf="flightCardsArray.length == 0">
+  Sorry! No direct flight available for this route :(
+</div>

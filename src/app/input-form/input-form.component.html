@@ -4,16 +4,17 @@
 
     <div class="flex-holder">
         <mat-button-toggle-group #group="matButtonToggleGroup" value="oneway">
-            <mat-button-toggle class="button-toggle" value="oneway">
+            <mat-button-toggle (click)="data.isReturnFlightNeeded = false" class="button-toggle" value="oneway">
                 <mat-icon>arrow_right_alt</mat-icon> One Way
             </mat-button-toggle>
-            <mat-button-toggle class="button-toggle" value="return">
+            <mat-button-toggle (click)="data.isReturnFlightNeeded = true" class="button-toggle" value="return">
                 <mat-icon>swap_horiz</mat-icon> Return
             </mat-button-toggle>
         </mat-button-toggle-group>
         <form class="example-form" style="display: flex;flex-direction: column;padding-top: 15px;">
             <mat-form-field class="example-full-width">
-                <input type="text" placeholder="Enter Origin" matInput [formControl]="myControl1"
+                <input #origin name="origin" [(ngModel)]="data.selectedOrigin"
+                 type="text" placeholder="Enter Origin" matInput [formControl]="myControl1"
                     [matAutocomplete]="auto1">
                 <mat-autocomplete #auto1="matAutocomplete">
                     <mat-option *ngFor="let option of filteredOptions1 | async" [value]="option">
@@ -23,7 +24,8 @@
             </mat-form-field>
             
             <mat-form-field class="example-full-width">
-                <input type="text" placeholder="Enter Destination" matInput [formControl]="myControl2"
+                <input #destination name="destination" [(ngModel)]="data.selectedDestination" 
+                type="text" placeholder="Enter Destination" matInput [formControl]="myControl2"
                     [matAutocomplete]="auto2">
                 <mat-autocomplete #auto2="matAutocomplete">
                     <mat-option *ngFor="let option of filteredOptions2 | async" [value]="option">
@@ -33,22 +35,33 @@
             </mat-form-field>
             
             <mat-form-field class="example-full-width">
-                <input matInput [matDatepicker]="picker" placeholder="Departure Date">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+                <input #departDate name="departDateValue" [(ngModel)]="data.selectedDepartDate" 
+                matInput [matDatepicker]="picker1" placeholder="Departure Date">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
             </mat-form-field>
             
             <mat-form-field *ngIf="group.value == 'return'" class="example-full-width">
-                <input matInput [matDatepicker]="picker" placeholder="Return Date">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+                <input #returnDate name="returnDateValue" [(ngModel)]="data.selectedReturnDate" 
+                matInput [matDatepicker]="picker2" placeholder="Return Date">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
             </mat-form-field>
             
             <mat-form-field class="example-full-width">
-                <input matInput type="number" placeholder="No. of Passengers">
+                <input #passengerCount name="passengerCount" 
+                [(ngModel)]="data.selectedPassengerCount" matInput type="number" 
+                placeholder="No. of Passengers">
             </mat-form-field>
             
-            <button mat-raised-button color="primary">Search</button>
+            <button (click)="showPreview()" *ngIf="group.value == 'oneway'" 
+            [disabled]="!(origin.value && destination.value && passengerCount.value 
+            && departDate.value)" 
+            mat-raised-button color="primary">Search Flights</button>
+
+            <button (click)="showPreview()" *ngIf="group.value == 'return'" 
+            [disabled]="!(origin.value && destination.value && passengerCount.value && departDate.value && data.selectedReturnDate)" 
+            mat-raised-button color="primary">Search Flights</button>
 
         </form>
     </div>

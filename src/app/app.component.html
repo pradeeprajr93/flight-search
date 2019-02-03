@@ -1,9 +1,7 @@
 <app-header></app-header>
-<div>
-  <app-input-form>
-
+<div class="input-and-preview">
+  <app-input-form [ngClass]="{'widthAuto': data.showPreview}">
   </app-input-form>
-  <!-- <app-preview-pane>
-
-  </app-preview-pane> -->
+  <app-preview-pane *ngIf="data.showPreview">
+  </app-preview-pane>
 </div>

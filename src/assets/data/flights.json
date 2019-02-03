@@ -6,7 +6,9 @@
         "destination": "Delhi",
         "destinationcode": "DEL",
         "departure": "10:00AM",
-        "arrival": "12:00PM"
+        "arrival": "12:00PM",
+        "fare": "8000",
+        "rating": 4
     },
     {
         "flightcode": "YF102",
@@ -15,7 +17,9 @@
         "destination": "Pune",
         "destinationcode": "PNQ",
         "departure": "12:00AM",
-        "arrival": "10:00PM"
+        "arrival": "10:00PM",
+        "fare": "12000",
+        "rating": 5
     },
     {
         "flightcode": "YF103",
@@ -24,7 +28,9 @@
         "destination": "Bengaluru",
         "destinationcode": "BLR",
         "departure": "12:00AM",
-        "arrival": "10:00PM"
+        "arrival": "10:00PM",
+        "fare": "4000",
+        "rating": 4
     },
     {
         "flightcode": "YF104",
@@ -33,7 +39,9 @@
         "destination": "Chennai",
         "destinationcode": "MAA",
         "departure": "12:00PM",
-        "arrival": "3:00PM"
+        "arrival": "3:00PM",
+        "fare": "7000",
+        "rating": 3
     },
     {
         "flightcode": "YF105",
@@ -42,7 +50,9 @@
         "destination": "Chennai",
         "destinationcode": "MAA",
         "departure": "12:00PM",
-        "arrival": "3:00PM"
+        "arrival": "3:00PM",
+        "fare": "21000",
+        "rating": 5
     },
     {
         "flightcode": "YF106",
@@ -51,7 +61,9 @@
         "destination": "Hyderabad",
         "destinationcode": "HYD",
         "departure": "12:00PM",
-        "arrival": "3:00PM"
+        "arrival": "3:00PM",
+        "fare": "31000",
+        "rating": 4
     },
     {
         "flightcode": "YF107",
@@ -60,7 +72,9 @@
         "destination": "Trichy",
         "destinationcode": "TRZ",
         "departure": "12:00PM",
-        "arrival": "6:00PM"
+        "arrival": "6:00PM",
+        "fare": "8000",
+        "rating": 3
     },
     {
         "flightcode": "YF108",
@@ -69,7 +83,9 @@
         "destination": "Mysore",
         "destinationcode": "MYQ",
         "departure": "12:00PM",
-        "arrival": "6:00PM"
+        "arrival": "6:00PM",
+        "fare": "4000",
+        "rating": 4
     },
     {
         "flightcode": "YF109",
@@ -78,7 +94,9 @@
         "destination": "Pondicherry",
         "destinationcode": "PNY",
         "departure": "12:00PM",
-        "arrival": "6:00PM"
+        "arrival": "6:00PM",
+        "fare": "6000",
+        "rating": 3
     },
     {
         "flightcode": "YF110",
@@ -87,6 +105,8 @@
         "destination": "Port Blair",
         "destinationcode": "IXZ",
         "departure": "12:00PM",
-        "arrival": "6:00PM"
+        "arrival": "6:00PM",
+        "fare": "34000",
+        "rating": 4
     }
 ]

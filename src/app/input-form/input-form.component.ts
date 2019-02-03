@@ -44,7 +44,6 @@ export class InputFormComponent implements OnInit {
       this.autoCompleteArray.push(flightObject.destination);
     }
     this.autoCompleteArray = this.autoCompleteArray.filter((v, i, a) => a.indexOf(v) === i).sort();
-    console.log(this.autoCompleteArray);
     this.filteredOptions1 = this.myControl1.valueChanges
       .pipe(
         startWith(''),
@@ -55,6 +54,11 @@ export class InputFormComponent implements OnInit {
         startWith(''),
         map(value => this._filter(value))
       );
+  }
+
+  showPreview(){
+    this.data.notify();
+    this.data.showPreview = true;
   }
 
 }
